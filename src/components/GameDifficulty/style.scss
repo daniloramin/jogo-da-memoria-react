@@ -1,0 +1,67 @@
+@import "../../styles/colors";
+@import "../../styles/medias";
+
+.game-difficulty-box {
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  background-color: rgba($color-three, 0.4);
+  padding: 0.3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0px 0.5rem;
+  box-shadow: 0px 2px 5px 0px black;
+
+  button {
+    border: 1px solid black;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+
+    background-color: whitesmoke;
+    color: $color-three;
+    transition: color 0.3s, background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-three;
+      color: $color-two;
+    }
+  }
+
+  .selected {
+    transform: scale(1.1);
+    background-color: $color-three;
+    color: $color-two;
+  }
+
+  @media only screen and (min-width: $mobile) {
+    padding: 0.5rem;
+
+    button {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  @media only screen and (min-width: $tablet) {
+    padding: 0.7rem;
+
+    button {
+      padding: 0.6rem 0.9rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  @media only screen and (min-width: $laptop-4k) {
+    padding: 1rem 1.5rem;
+
+    button {
+      padding: 1rem 1.4rem;
+      font-size: 1rem;
+    }
+  }
+}

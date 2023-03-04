@@ -1,13 +1,15 @@
 import React from "react";
 import "./style.scss";
 import Title from "../Title";
+import GameDifficulty from "../GameDifficulty";
+import ThemeSwitcher from "../ThemeSwitcher";
 
 function Header(props) {
   return (
     <header>
       <Title>Jogo da Memória</Title>
-      <div>Game Difficulty</div>
-      <div>Theme Switcher</div>
+      <GameDifficulty />
+      <ThemeSwitcher />
     </header>
   );
 }
