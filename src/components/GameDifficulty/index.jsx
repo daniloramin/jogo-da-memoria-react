@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import "./style.scss";
+import { GameDifficultyContext } from "../../context/GameDifficultyContext";
 
 function GameDifficulty(props) {
-  const [difficulty, setDifficulty] = useState(1);
-
-  useEffect(() => {
-    console.log(difficulty);
-  }, [difficulty]);
+  const [difficulty, setDifficulty] = useContext(GameDifficultyContext);
 
   return (
     <div className="game-difficulty-box">
       <button
         className={difficulty === 1 ? "selected" : ""}
         onClick={() => {
-          setDifficulty(1);
+          setDifficulty((prev) => 1);
         }}
         disabled={difficulty === 1 ? true : false}
       >
@@ -22,7 +19,7 @@ function GameDifficulty(props) {
       <button
         className={difficulty === 2 ? "selected" : ""}
         onClick={() => {
-          setDifficulty(2);
+          setDifficulty((prev) => 2);
         }}
         disabled={difficulty === 2 ? true : false}
       >
@@ -31,7 +28,7 @@ function GameDifficulty(props) {
       <button
         className={difficulty === 3 ? "selected" : ""}
         onClick={() => {
-          setDifficulty(3);
+          setDifficulty((prev) => 3);
         }}
         disabled={difficulty === 3 ? true : false}
       >

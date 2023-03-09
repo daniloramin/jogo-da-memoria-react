@@ -7,7 +7,10 @@ import ThemeSwitcher from "../ThemeSwitcher";
 function Header(props) {
   return (
     <header>
-      <Title>Jogo da Memória</Title>
+      <Title>
+        Jogo da
+        <br /> Memória
+      </Title>
       <GameDifficulty />
       <ThemeSwitcher />
     </header>
