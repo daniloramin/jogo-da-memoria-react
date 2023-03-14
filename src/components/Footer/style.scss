@@ -1,0 +1,28 @@
+@import "../../styles/colors";
+@import "../../styles/medias";
+
+footer {
+  background-image: linear-gradient(to top, $color-two, transparent);
+  // border: 1px solid red;
+  padding: 0.5rem 1rem;
+
+  @media only screen and (min-width: $mobile) {
+    padding: 0.5rem 1.5rem;
+  }
+
+  @media only screen and (min-width: $tablet) {
+    padding: 1rem 2rem;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    padding: 1.5rem 2.5rem;
+  }
+
+  @media only screen and (min-width: $laptopL) {
+    padding: 1.5rem 3rem;
+  }
+
+  @media only screen and (min-width: $laptop-4k) {
+    padding: 2.5rem 4rem;
+  }
+}

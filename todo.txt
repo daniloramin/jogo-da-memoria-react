@@ -1,0 +1,12 @@
+arrumar o bug de resetar o array de pairs quando trocar a dificuldade do jogo.
+
+win screen.
+
+footer.
+
+timer.
+
+movement counter.
+
+switch entre temas light e black.
+

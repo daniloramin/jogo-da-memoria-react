@@ -14,10 +14,7 @@
     height: 100px;
     transition: transform 0.4s;
     transform-style: preserve-3d;
-
-    &:hover {
-      transform: rotateY(180deg);
-    }
+    cursor: pointer;
 
     .card-front,
     .card-back {
@@ -44,5 +41,9 @@
       backface-visibility: hidden;
       transform: rotateY(180deg);
     }
+  }
+
+  .fliped {
+    transform: rotateY(180deg);
   }
 }
