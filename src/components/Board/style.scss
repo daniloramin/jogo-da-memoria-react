@@ -1,4 +1,5 @@
 @import "../../styles/colors";
+@import "../../styles/medias";
 
 .board {
   max-width: 1000px;
@@ -10,8 +11,8 @@
 
   .card {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     transition: transform 0.4s;
     transform-style: preserve-3d;
     cursor: pointer;
@@ -26,7 +27,7 @@
       width: 100%;
       height: 100%;
 
-      font-size: 2rem;
+      font-size: 1.2rem;
       border: 1px solid black;
       border-radius: 0.5rem;
       box-shadow: 2px 2px 2px 0px rgba($color-three, 0.2);
@@ -43,7 +44,59 @@
     }
   }
 
+  .unfliped {
+    transform: rotateY(0deg);
+  }
+
   .fliped {
     transform: rotateY(180deg);
+  }
+
+  @media only screen and (min-width: $mobile) {
+    .card {
+      width: 75px;
+      height: 75px;
+
+      .card-front,
+      .card-back {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $tablet) {
+    .card {
+      width: 85px;
+      height: 85px;
+
+      .card-front,
+      .card-back {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $laptop) {
+    .card {
+      width: 95px;
+      height: 95px;
+
+      .card-front,
+      .card-back {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $laptop-4k) {
+    .card {
+      width: 250px;
+      height: 250px;
+
+      .card-front,
+      .card-back {
+        font-size: 5rem;
+      }
+    }
   }
 }

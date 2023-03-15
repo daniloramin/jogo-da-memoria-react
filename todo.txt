@@ -10,3 +10,8 @@ movement counter.
 
 switch entre temas light e black.
 
+existe um bug quando clica muito rapido na carta que faz com que a class card seja aplicado no elemento board. provavelmente acontece por causa do target.parentElement. Ver como o professor fez o acesso ao elemento. 
+
+criar o contexto "win" para toda vez que trocar o jogo, resetar as cartas. ver de resetar também quando ainda não tiver ganho. 
+
+bug de não conseguir virar as cartas novamente ao clicar em restart. 
