@@ -2,8 +2,12 @@
 
 h1 {
   font-size: 1rem;
-  color: rgb(26, 26, 26);
   font-family: cursive, sans-serif;
+  color: rgb(26, 26, 26);
+  border: 2px solid rgb(26, 26, 26);
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: rgba(white, 0.3);
   cursor: pointer;
 
   &:hover {

@@ -9,7 +9,10 @@ function Board(props) {
   const [difficulty] = useContext(GameDifficultyContext);
   const [cards, setCards] = useState(getCardsBasedOnDifficulty(difficulty));
   const [pairs, setPairs] = useState(0);
-  let flipedCards = [];
+  const [flipedCards, setFlipedCards] = useState({ first: null, second: null });
+
+  console.log("resetou");
+  console.log(cards);
 
   useEffect(() => {
     setCards(() => getCardsBasedOnDifficulty(difficulty));
@@ -22,41 +25,47 @@ function Board(props) {
     }
   }, [pairs]);
 
-  function onChooseCard({ target }) {
-    const card = target.parentElement;
-
-    if (
-      (flipedCards.length === 1 && card === flipedCards[0]) ||
-      pairs === cards.length
-    )
-      return;
-
-    console.log("nao verificou");
-
-    if (flipedCards.length === 2) return;
-
-    card.className = "card fliped";
-
-    if (flipedCards.length === 1) {
-      flipedCards.push(card);
-
-      if (flipedCards[0].dataset.card === flipedCards[1].dataset.card) {
+  useEffect(() => {
+    if (flipedCards.second) {
+      if (flipedCards.first.content === flipedCards.second.content) {
         setPairs((prev) => prev + 2);
 
-        flipedCards = [];
+        setFlipedCards(() => ({ first: null, second: null }));
         return;
-      }
+      } else {
+        setTimeout(() => {
+          flipedCards.first.fliped = false;
+          flipedCards.second.fliped = false;
 
-      setTimeout(() => {
-        flipedCards[0].className = "card";
-        flipedCards[1].className = "card";
-        flipedCards = [];
-      }, 1000);
+          handleFlip(flipedCards.first);
+          handleFlip(flipedCards.second);
+
+          setFlipedCards(() => ({ first: null, second: null }));
+        }, 1000);
+      }
+    }
+  }, [flipedCards]);
+
+  function handleFlip(card) {
+    const newCards = cards.map((c) => (c.id === card.id ? card : c));
+    setCards(() => [...newCards]);
+  }
+
+  function onChooseCard(card) {
+    if (flipedCards.first && flipedCards.second) return;
+
+    if (card.fliped) return;
+
+    card.fliped = true;
+    handleFlip(card);
+
+    if (flipedCards.first) {
+      setFlipedCards((prev) => ({ ...prev, second: card }));
 
       return;
     }
 
-    flipedCards.push(card);
+    setFlipedCards((prev) => ({ ...prev, first: card }));
   }
 
   return (
@@ -64,13 +73,15 @@ function Board(props) {
       <div className="board">
         {cards.map((card, index) => (
           <div
-            className="card unfliped"
-            onClick={onChooseCard}
-            data-card={card}
-            key={index}
+            className={`card ${card.fliped ? "fliped" : ""}`}
+            onClick={() => {
+              onChooseCard(card);
+            }}
+            data-card={card.content}
+            key={card.id}
           >
             <div className="card-front">🧠</div>
-            <div className="card-back">{card}</div>
+            <div className="card-back">{card.content}</div>
           </div>
         ))}
       </div>
@@ -78,15 +89,15 @@ function Board(props) {
         <button
           className="restartButton"
           onClick={() => {
-            // setCards(() => {
-            //   console.log("primeiro vazio");
-            //   return [];
-            // });
-
-            setCards(() => {
-              console.log("segundo cheio");
-              return getCardsBasedOnDifficulty(difficulty);
+            cards.forEach((card) => {
+              card.fliped = false;
             });
+
+            setTimeout(() => {
+              setCards(() => [...getCardsBasedOnDifficulty(difficulty)]);
+            }, 400);
+            setShowRestart(() => false);
+            setPairs(() => 0);
           }}
         >
           X
