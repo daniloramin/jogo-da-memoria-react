@@ -1,6 +1,5 @@
-arrumar o bug de resetar o array de pairs quando trocar a dificuldade do jogo. - talvez tenha arrumado, testar para confirmar. 
-
-win screen. - mudou para restart button, falta estilizar.
+arrumar o bug de resetar o array de pairs quando trocar a dificuldade do jogo. - talvez tenha arrumado, testar para confirmar.
+Terá que resetar tudo quando for trocar de dificuldade. 
 
 footer.
 
@@ -10,8 +9,6 @@ movement counter.
 
 switch entre temas light e black.
 
-existe um bug quando clica muito rapido na carta que faz com que a class card seja aplicado no elemento board. provavelmente acontece por causa do target.parentElement. Ver como o professor fez o acesso ao elemento. 
-
-criar o contexto "win" para toda vez que trocar o jogo, resetar as cartas. ver de resetar também quando ainda não tiver ganho. - talvez concertado, verificar. 
+criar o contexto "win" e "playing" para toda vez que trocar o jogo, resetar as cartas. ver de resetar também quando ainda não tiver ganho.  
 
 bug de não conseguir virar as cartas novamente ao clicar em restart. - talvez concertado, verificar

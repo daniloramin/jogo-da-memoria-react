@@ -1,3 +1,5 @@
+@import "../../styles/medias";
+
 .theme-switcher {
   button {
     width: 35px;
@@ -6,5 +8,27 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    @media only screen and (min-width: $tablet) {
+      width: 6rem;
+      height: 3.5rem;
+    }
+
+    @media only screen and (min-width: $laptop) {
+      width: 7.5rem;
+      height: 4.5rem;
+    }
+
+    @media only screen and (min-width: $laptopL) {
+      font-size: 2rem;
+      width: 9.5rem;
+      height: 6rem;
+    }
+
+    @media only screen and (min-width: $laptop-4k) {
+      font-size: 2.5rem;
+      width: 13rem;
+      height: 7.5rem;
+    }
   }
 }

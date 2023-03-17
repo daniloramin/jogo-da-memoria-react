@@ -100,3 +100,37 @@
     }
   }
 }
+
+.restartButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-three;
+  color: $color-two;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin: 0px auto;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba($color-three, 0.1);
+    color: $color-three;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.1rem;
+  }
+
+  @media only screen and (min-width: $laptopL) {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.3rem;
+  }
+
+  @media only screen and (min-width: $laptop-4k) {
+    font-size: 3rem;
+    padding: 1.5rem 2.5rem;
+  }
+}

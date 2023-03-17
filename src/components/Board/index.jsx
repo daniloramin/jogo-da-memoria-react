@@ -85,7 +85,7 @@ function Board(props) {
           </div>
         ))}
       </div>
-      {showRestart && (
+      {
         <button
           className="restartButton"
           onClick={() => {
@@ -100,9 +100,9 @@ function Board(props) {
             setPairs(() => 0);
           }}
         >
-          X
+          Jogar novamente
         </button>
-      )}
+      }
     </>
   );
 }
