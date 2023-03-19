@@ -15,7 +15,7 @@ function Board(props) {
   console.log(cards);
 
   useEffect(() => {
-    setCards(() => getCardsBasedOnDifficulty(difficulty));
+    resetCards();
   }, [difficulty]);
 
   useEffect(() => {
@@ -49,6 +49,14 @@ function Board(props) {
   function handleFlip(card) {
     const newCards = cards.map((c) => (c.id === card.id ? card : c));
     setCards(() => [...newCards]);
+  }
+
+  function resetCards() {
+    setCards(() => [...getCardsBasedOnDifficulty(difficulty)]);
+
+    setPairs(() => 0);
+
+    setShowRestart(() => false);
   }
 
   function onChooseCard(card) {
@@ -85,24 +93,16 @@ function Board(props) {
           </div>
         ))}
       </div>
-      {
+      {showRestart && (
         <button
           className="restartButton"
           onClick={() => {
-            cards.forEach((card) => {
-              card.fliped = false;
-            });
-
-            setTimeout(() => {
-              setCards(() => [...getCardsBasedOnDifficulty(difficulty)]);
-            }, 400);
-            setShowRestart(() => false);
-            setPairs(() => 0);
+            resetCards();
           }}
         >
           Jogar novamente
         </button>
-      }
+      )}
     </>
   );
 }
