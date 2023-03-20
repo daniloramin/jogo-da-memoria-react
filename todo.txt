@@ -1,11 +1,5 @@
 footer.
 
-timer.
-
-movement counter.
-
 switch entre temas light e black. 
-
-criar o contexto "playing" para sincronizar com o timer e movement counter.
 
 bug de não conseguir virar as cartas novamente ao clicar em restart. - talvez concertado, verificar

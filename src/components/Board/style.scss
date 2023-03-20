@@ -2,135 +2,66 @@
 @import "../../styles/medias";
 
 .board {
-  max-width: 1000px;
-  margin: 1rem auto;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: center;
-  gap: 1rem;
-
-  .card {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    transition: transform 0.4s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-
-    .card-front,
-    .card-back {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      position: absolute;
-      width: 100%;
-      height: 100%;
-
-      font-size: 1.2rem;
-      border: 1px solid black;
-      border-radius: 0.5rem;
-      box-shadow: 2px 2px 2px 0px rgba($color-three, 0.2);
-    }
-
-    .card-front {
-      backface-visibility: hidden;
-      background-color: $color-two;
-    }
-
-    .card-back {
-      backface-visibility: hidden;
-      transform: rotateY(180deg);
-    }
-  }
-
-  .unfliped {
-    transform: rotateY(0deg);
-  }
-
-  .fliped {
-    transform: rotateY(180deg);
-  }
-
-  @media only screen and (min-width: $mobile) {
-    .card {
-      width: 75px;
-      height: 75px;
-
-      .card-front,
-      .card-back {
-        font-size: 1.5rem;
-      }
-    }
-  }
-
-  @media only screen and (min-width: $tablet) {
-    .card {
-      width: 85px;
-      height: 85px;
-
-      .card-front,
-      .card-back {
-        font-size: 1.7rem;
-      }
-    }
-  }
-
-  @media only screen and (min-width: $laptop) {
-    .card {
-      width: 95px;
-      height: 95px;
-
-      .card-front,
-      .card-back {
-        font-size: 2rem;
-      }
-    }
-  }
-
-  @media only screen and (min-width: $laptop-4k) {
-    .card {
-      width: 250px;
-      height: 250px;
-
-      .card-front,
-      .card-back {
-        font-size: 5rem;
-      }
-    }
-  }
-}
-
-.restartButton {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-color: $color-three;
-  color: $color-two;
-  border: 1px solid black;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  margin: 0px auto;
-  transition: background-color 0.2s;
 
-  &:hover {
-    background-color: rgba($color-three, 0.1);
-    color: $color-three;
+  .timer-movements {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    font-weight: bold;
+
+    @media only screen and (min-width: $laptop-4k) {
+      gap: 2.5rem;
+    }
   }
 
-  @media only screen and (min-width: $laptop) {
-    font-size: 1.1rem;
-    padding: 0.6rem 1.1rem;
+  .game {
+    max-width: 1000px;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 1rem;
+
+    @media only screen and (min-width: $laptop-4k) {
+      gap: 2.5rem;
+    }
   }
 
-  @media only screen and (min-width: $laptopL) {
-    font-size: 1.3rem;
-    padding: 0.8rem 1.3rem;
-  }
+  .restartButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-three;
+    color: $color-two;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin: 0px auto;
+    transition: background-color 0.2s;
 
-  @media only screen and (min-width: $laptop-4k) {
-    font-size: 3rem;
-    padding: 1.5rem 2.5rem;
+    &:hover {
+      background-color: rgba($color-three, 0.1);
+      color: $color-three;
+    }
+
+    @media only screen and (min-width: $laptop) {
+      font-size: 1.1rem;
+      padding: 0.6rem 1.1rem;
+    }
+
+    @media only screen and (min-width: $laptopL) {
+      font-size: 1.3rem;
+      padding: 0.8rem 1.3rem;
+    }
+
+    @media only screen and (min-width: $laptop-4k) {
+      font-size: 3rem;
+      padding: 1.5rem 2.5rem;
+    }
   }
 }

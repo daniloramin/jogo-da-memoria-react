@@ -1,0 +1,15 @@
+@import "../../styles/medias";
+
+.timer {
+  width: 50%;
+  text-align: right;
+  font-size: 1rem;
+
+  @media only screen and (min-width: $tablet) {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (min-width: $laptop-4k) {
+    font-size: 4rem;
+  }
+}

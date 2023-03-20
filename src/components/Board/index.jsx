@@ -3,24 +3,29 @@ import "./style.scss";
 
 import { GameDifficultyContext } from "../../context/GameDifficultyContext";
 import getCardsBasedOnDifficulty from "../../getCardsBasedOnDifficulty";
+import Card from "../Card";
+import Timer from "../Timer";
+import MovementsCounter from "../MovementsCounter";
 
 function Board(props) {
-  const [showRestart, setShowRestart] = useState(false);
   const [difficulty] = useContext(GameDifficultyContext);
   const [cards, setCards] = useState(getCardsBasedOnDifficulty(difficulty));
   const [pairs, setPairs] = useState(0);
   const [flipedCards, setFlipedCards] = useState({ first: null, second: null });
+  const [playing, setPlaying] = useState(false);
+  const [movements, setMovements] = useState(0);
+  const [win, setWin] = useState(false);
 
   console.log("resetou");
   console.log(cards);
 
   useEffect(() => {
-    resetCards();
+    resetGame();
   }, [difficulty]);
 
   useEffect(() => {
     if (pairs === cards.length) {
-      setShowRestart(() => true);
+      setWin(() => true);
       return;
     }
   }, [pairs]);
@@ -51,12 +56,11 @@ function Board(props) {
     setCards(() => [...newCards]);
   }
 
-  function resetCards() {
+  function resetGame() {
     setCards(() => [...getCardsBasedOnDifficulty(difficulty)]);
-
     setPairs(() => 0);
-
-    setShowRestart(() => false);
+    setPlaying(() => false);
+    setWin(() => false);
   }
 
   function onChooseCard(card) {
@@ -66,6 +70,12 @@ function Board(props) {
 
     card.fliped = true;
     handleFlip(card);
+
+    if (playing === false) {
+      setPlaying(() => true);
+    }
+
+    setMovements((prev) => prev + 1);
 
     if (flipedCards.first) {
       setFlipedCards((prev) => ({ ...prev, second: card }));
@@ -79,30 +89,31 @@ function Board(props) {
   return (
     <>
       <div className="board">
-        {cards.map((card, index) => (
-          <div
-            className={`card ${card.fliped ? "fliped" : ""}`}
+        <div className="timer-movements">
+          <Timer playing={playing} win={win} />
+          <MovementsCounter
+            playing={playing}
+            movements={movements}
+            setMovements={setMovements}
+            win={win}
+          />
+        </div>
+        <div className="game">
+          {cards.map((card, index) => (
+            <Card card={card} onChooseCard={onChooseCard} />
+          ))}
+        </div>
+        {win && (
+          <button
+            className="restartButton"
             onClick={() => {
-              onChooseCard(card);
+              resetGame();
             }}
-            data-card={card.content}
-            key={card.id}
           >
-            <div className="card-front">🧠</div>
-            <div className="card-back">{card.content}</div>
-          </div>
-        ))}
+            Jogar novamente
+          </button>
+        )}
       </div>
-      {showRestart && (
-        <button
-          className="restartButton"
-          onClick={() => {
-            resetCards();
-          }}
-        >
-          Jogar novamente
-        </button>
-      )}
     </>
   );
 }
