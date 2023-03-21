@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./style.scss";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 function ThemeSwitcher(props) {
   const [darkMode, setDarkMode] = useState(false);
@@ -11,7 +12,7 @@ function ThemeSwitcher(props) {
           setDarkMode((prev) => !prev);
         }}
       >
-        {darkMode ? "🌙" : "💡"}
+        {darkMode ? <MdDarkMode /> : <MdLightMode />}
       </button>
     </div>
   );
