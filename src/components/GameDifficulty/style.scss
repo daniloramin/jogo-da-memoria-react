@@ -22,20 +22,20 @@
     font-weight: bold;
 
     background-color: whitesmoke;
-    color: $color-three;
+    color: black;
     transition: color 0.3s, background-color 0.3s;
     cursor: pointer;
 
     &:hover {
-      background-color: $color-three;
-      color: $color-two;
+      background-color: var(--primary-color);
+      color: var(--text-color);
     }
   }
 
   .selected {
     transform: scale(1.1);
-    background-color: $color-three;
-    color: $color-two;
+    background-color: var(--primary-color);
+    color: var(--text-color);
   }
 
   @media only screen and (min-width: $mobile) {

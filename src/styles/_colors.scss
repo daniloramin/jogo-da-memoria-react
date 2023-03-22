@@ -1,3 +1,19 @@
-$color-one: aliceblue;
-$color-two: lightskyblue;
-$color-three: rgb(0, 0, 0);
+:root,
+:root.light {
+  --background-color: aliceblue;
+  --primary-color: lightskyblue;
+  --secondary-color: rgb(0, 0, 0);
+  --text-color: rgb(26, 26, 26);
+  --win-text-color: mediumseagreen;
+  --card-front-color: white;
+}
+
+:root.dark {
+  --teste: black;
+  --background-color: rgb(41, 41, 41);
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: gray;
+  --text-color: aliceblue;
+  --win-text-color: mediumseagreen;
+  --card-front-color: rgb(75, 75, 75);
+}

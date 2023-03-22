@@ -20,17 +20,18 @@
     height: 100%;
 
     font-size: 1.2rem;
-    border: 1px solid black;
+    border: 1px solid var(--secondary-color);
     border-radius: 0.5rem;
-    box-shadow: 2px 2px 2px 0px rgba($color-three, 0.2);
+    box-shadow: 1px 1px 5px 0px var(--secondary-color);
   }
 
   .card-front {
     backface-visibility: hidden;
-    background-color: $color-two;
+    background-color: var(--primary-color);
   }
 
   .card-back {
+    background-color: var(--card-front-color);
     backface-visibility: hidden;
     transform: rotateY(180deg);
   }
