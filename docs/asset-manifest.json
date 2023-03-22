@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jogo-da-memoria-react/static/css/main.6d041d88.css",
-    "main.js": "/jogo-da-memoria-react/static/js/main.0be789a9.js",
-    "static/js/787.fef3e67b.chunk.js": "/jogo-da-memoria-react/static/js/787.fef3e67b.chunk.js",
-    "index.html": "/jogo-da-memoria-react/index.html",
-    "main.6d041d88.css.map": "/jogo-da-memoria-react/static/css/main.6d041d88.css.map",
-    "main.0be789a9.js.map": "/jogo-da-memoria-react/static/js/main.0be789a9.js.map",
-    "787.fef3e67b.chunk.js.map": "/jogo-da-memoria-react/static/js/787.fef3e67b.chunk.js.map"
+    "main.css": "./static/css/main.6d041d88.css",
+    "main.js": "./static/js/main.f3868536.js",
+    "static/js/787.fef3e67b.chunk.js": "./static/js/787.fef3e67b.chunk.js",
+    "index.html": "./index.html",
+    "main.6d041d88.css.map": "./static/css/main.6d041d88.css.map",
+    "main.f3868536.js.map": "./static/js/main.f3868536.js.map",
+    "787.fef3e67b.chunk.js.map": "./static/js/787.fef3e67b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6d041d88.css",
-    "static/js/main.0be789a9.js"
+    "static/js/main.f3868536.js"
   ]
 }
