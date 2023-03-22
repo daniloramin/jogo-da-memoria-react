@@ -89,7 +89,7 @@ function Board(props) {
   return (
     <>
       <div className="board">
-        <div className="timer-movements">
+        <div className="timer-movements" data-win={win}>
           <Timer playing={playing} win={win} />
           <MovementsCounter
             playing={playing}

@@ -1,7 +1,5 @@
-@import "../../styles/colors";
-
 body {
-  background-color: $color-one;
+  background-color: var(--background-color);
 
   .container {
     height: 100vh;

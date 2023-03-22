@@ -33,10 +33,7 @@ function Timer({ playing, win }) {
   }, [seconds]);
 
   return (
-    <span
-      style={{ color: `${win ? "mediumseagreen" : ""}` }}
-      className="timer"
-    >{`${minutes < 10 ? "0" + minutes : minutes} : ${
+    <span className="timer">{`${minutes < 10 ? "0" + minutes : minutes} : ${
       seconds < 10 ? "0" + seconds : seconds
     }`}</span>
   );

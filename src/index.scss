@@ -1,5 +1,26 @@
 @import "./styles/reset";
 
+:root,
+:root.light {
+  --background-color: aliceblue;
+  --primary-color: lightskyblue;
+  --secondary-color: rgb(0, 0, 0);
+  --text-color: rgb(26, 26, 26);
+  --win-text-color: mediumseagreen;
+  --card-front-color: white;
+  --teste: yellow;
+}
+
+:root.dark {
+  --teste: black;
+  --background-color: rgb(41, 41, 41);
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: gray;
+  --text-color: aliceblue;
+  --win-text-color: mediumseagreen;
+  --card-front-color: white;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

@@ -1,5 +1,11 @@
-footer.
-
 switch entre temas light e black. 
+
+ver de usar variáveis como: --shadow, --border, --text, --button-background, etc...
+
+mudar o valor de todas as variáveis scss para variáveis css.
+
+configurar as cores do tema dark corretamente.
+
+salvar o tema no localStorage
 
 bug de não conseguir virar as cartas novamente ao clicar em restart. - talvez concertado, verificar

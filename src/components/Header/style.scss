@@ -1,12 +1,15 @@
 @import "../../styles/medias";
-@import "../../styles/colors";
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background-image: linear-gradient(to bottom, $color-two, transparent);
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    transparent
+  );
   padding: 0.5rem 1rem;
 
   @media only screen and (min-width: $mobile) {

@@ -1,18 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 function ThemeSwitcher(props) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
 
   return (
     <div className="theme-switcher">
       <button
         onClick={() => {
-          setDarkMode((prev) => !prev);
+          setTheme((prev) => (prev === "dark" ? "light" : "dark"));
         }}
       >
-        {darkMode ? <MdDarkMode /> : <MdLightMode />}
+        {theme === "dark" ? <MdDarkMode /> : <MdLightMode />}
       </button>
     </div>
   );

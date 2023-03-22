@@ -8,14 +8,7 @@ function MovementsCounter({ playing, movements, setMovements, win }) {
     }
   }, [playing]);
 
-  return (
-    <span
-      className="movements-counter"
-      style={{ color: `${win ? "mediumseagreen" : ""}` }}
-    >
-      {movements}
-    </span>
-  );
+  return <span className="movements-counter">{movements}</span>;
 }
 
 export default MovementsCounter;

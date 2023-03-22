@@ -18,6 +18,10 @@
     }
   }
 
+  [data-win="true"] {
+    color: var(--win-text-color);
+  }
+
   .game {
     max-width: 1000px;
     margin: 1rem auto;

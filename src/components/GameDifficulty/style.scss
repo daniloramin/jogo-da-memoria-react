@@ -2,9 +2,9 @@
 @import "../../styles/medias";
 
 .game-difficulty-box {
-  border: 2px solid black;
+  border: 2px solid var(--secondary-color);
   border-radius: 0.5rem;
-  background-color: rgba($color-three, 0.4);
+  background-color: var(--background-color);
   padding: 0.3rem;
 
   display: flex;
@@ -12,10 +12,10 @@
   align-items: center;
   gap: 0.3rem;
   margin: 0px 0.5rem;
-  box-shadow: 0px 2px 5px 0px black;
+  box-shadow: 0px 2px 5px 0px var(--secondary-color);
 
   button {
-    border: 1px solid black;
+    border: 1px solid var(--secondary-color);
     padding: 0.3rem 0.6rem;
     border-radius: 0.5rem;
     font-size: 0.6rem;
