@@ -3,10 +3,11 @@ import "./style.scss";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 function ThemeSwitcher(props) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
 
   useEffect(() => {
     document.documentElement.className = theme;
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
