@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Jogo da Memória React 🧠
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img height="280px" src="https://user-images.githubusercontent.com/83323822/227807100-907fda7a-2a62-4476-913a-c037c64750a4.png" alt="Tema light" /> <img height="280px" src="https://user-images.githubusercontent.com/83323822/227806870-0d0e80b8-36ec-4bb3-b750-50683877cc5b.png" alt="Tema dark" />
 
-## Available Scripts
+<img height="280px" src="https://user-images.githubusercontent.com/83323822/227807202-adf7cb8b-0ed0-4ba8-a3cb-0a6b667a79a2.png" alt="Cartas viradas e jogo finalizado light" /> <img height="280px" src="https://user-images.githubusercontent.com/83323822/227807222-be62f0fb-8617-4391-8909-9c72fc83a43c.png" alt="Cartas viradas e jogo finalizado dark" />
 
-In the project directory, you can run:
+Acessar o <a href="https://github.com/daniloramin/jogo-da-memoria-react" target="_blank">Jogo da Memória React</a>.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Sobre
+O Jogo da Memória React foi feito com o objetivo de utilizar React.js para refatorar e trazer melhorias para um projeto que foi feito somente utilizando javascript como linguagem de programação. O projeto em questão foi o <a href="https://github.com/daniloramin/jogo-da-memoria" target="_blank">Jogo da Memória</a> que eu havia desenvolvido anteriormente.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Tecnologias usadas
+Para desenvolver esse projeto, foram utilizadas as seguintes tecnologias: 
+- HTML
+- node-sass
+- React.js
+- Context-API
+- React Icons
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Funcionalidades
+O projeto, além de manter todas as funcionalidades presentes no antigo <a href="https://github.com/daniloramin/jogo-da-memoria" target="_blank">Jogo da Memória</a>, possúi novas funcionalidades.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Funcionalidades antigas: 
+- Virar as cartas, sendo permitido somente duas cartas por vez.
+- Formar pares ao virar duas cartas iguais.
+- Virar as cartas para baixo novamente caso as cartas escolhidas não forem iguais.
+- Embaralhar as cartas ao inicial e reiniciar o jogo.
+- Botão para reiniciar o jogo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Novas funcionalidades:
+- Trocar entre dificuldades (fácil, médio e difícil);
+- Trocar entre temas light e dark;
+- Salvar no localstorage o tema escolhido pelo usuário, ficando selecionado o tema mesmo após o usuário salvar ou abrir a página novamente.
+- Timer e Contador de movimentos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+--- 
 
-### `npm run eject`
+## Arquitetura
+A estrutura de pastas do projeto foi distribuída dentro de uma pasta principal chamada "src". Dentro da pasta principal está o arquivo "index.js", sendo esse responsável por renderizar a aplicação React, o arquivo "cards.js" sendo o responsável por exportar os emojis que irão representar as cartas do jogo em sua respectiva dificuldade, o arquivo "getCardsBasedOnDifficulty.js" sendo o responsável por embaralhar e exportar as cartas baseado na dificuldade selecionada pelo jogador.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Também existem outras três pastas dentro de "src", sendo essas "components", "context" e "styles", onde são armazenados os componentes, contextos e configurações de estilos globais, respectivamente. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img height="400px" src="https://user-images.githubusercontent.com/83323822/227817489-35198146-b7fb-48e7-9fe5-b8b57983ca1d.png" alt="Estrutura de pastas to projeto" />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
