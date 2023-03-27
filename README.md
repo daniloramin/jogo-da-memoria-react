@@ -1,15 +1,15 @@
 # Jogo da Memória React 🧠
 
-<img height="280px" src="https://user-images.githubusercontent.com/83323822/227807100-907fda7a-2a62-4476-913a-c037c64750a4.png" alt="Tema light" /> <img height="280px" src="https://user-images.githubusercontent.com/83323822/227806870-0d0e80b8-36ec-4bb3-b750-50683877cc5b.png" alt="Tema dark" />
+<img height="500px" src="https://user-images.githubusercontent.com/83323822/227807100-907fda7a-2a62-4476-913a-c037c64750a4.png" alt="Tema light" /> <img height="500px" src="https://user-images.githubusercontent.com/83323822/227807202-adf7cb8b-0ed0-4ba8-a3cb-0a6b667a79a2.png" alt="Cartas viradas e jogo finalizado light" /> 
 
-<img height="280px" src="https://user-images.githubusercontent.com/83323822/227807202-adf7cb8b-0ed0-4ba8-a3cb-0a6b667a79a2.png" alt="Cartas viradas e jogo finalizado light" /> <img height="280px" src="https://user-images.githubusercontent.com/83323822/227807222-be62f0fb-8617-4391-8909-9c72fc83a43c.png" alt="Cartas viradas e jogo finalizado dark" />
+<img height="500px" src="https://user-images.githubusercontent.com/83323822/227806870-0d0e80b8-36ec-4bb3-b750-50683877cc5b.png" alt="Tema dark" /> <img height="500px" src="https://user-images.githubusercontent.com/83323822/227807222-be62f0fb-8617-4391-8909-9c72fc83a43c.png" alt="Cartas viradas e jogo finalizado dark" />
 
-Acessar o <a href="https://github.com/daniloramin/jogo-da-memoria-react" target="_blank">Jogo da Memória React</a>.
+Acessar o <a href="https://daniloramin.github.io/jogo-da-memoria-react/" target="_blank">Jogo da Memória React</a>.
 
 ---
 
 ## Sobre
-O Jogo da Memória React foi feito com o objetivo de utilizar React.js para refatorar e trazer melhorias para um projeto que foi feito somente utilizando javascript como linguagem de programação. O projeto em questão foi o <a href="https://github.com/daniloramin/jogo-da-memoria" target="_blank">Jogo da Memória</a> que eu havia desenvolvido anteriormente.
+O Jogo da Memória React foi feito com o objetivo de utilizar React.js para refatorar e trazer melhorias para um projeto que foi feito somente utilizando javascript como linguagem de programação. O projeto em questão foi o <a href="https://daniloramin.github.io/jogo-da-memoria/" target="_blank">Jogo da Memória</a> que eu havia desenvolvido anteriormente.
 
 ---
 
