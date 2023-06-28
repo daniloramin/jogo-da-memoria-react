@@ -36,7 +36,7 @@ Funcionalidades antigas:
 Novas funcionalidades:
 - Trocar entre dificuldades (fácil, médio e difícil);
 - Trocar entre temas light e dark;
-- Salvar no localstorage o tema escolhido pelo usuário, ficando selecionado o tema mesmo após o usuário salvar ou abrir a página novamente.
+- Salvar no localstorage o tema escolhido pelo usuário, ficando selecionado o tema mesmo após o usuário sair ou abrir a página novamente.
 - Timer e Contador de movimentos.
 
 --- 
